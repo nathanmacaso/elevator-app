@@ -37,7 +37,6 @@ export default class App extends Component {
       counter = current + 1;
       this.int = setInterval(() => {
         if(counter === stop) {
-          console.log('repeat')
           this.setState({ current: stop, stops: copyStops, next: null, moving: true });
           clearInterval(this.int);
         }else {
@@ -51,10 +50,10 @@ export default class App extends Component {
       counter = current - 1;
       this.int = setInterval(() => {
         if(counter === stop) {
-          this.setState({ current: stop, next: null, stops });
+          this.setState({ current: stop, next: null, stops:copyStops, moving: true });
           clearInterval(this.int);
         }else {
-          this.setState({ next: counter, stops: [stop], current: null });
+          this.setState({ next: counter, current: null });
           counter --;
         }
       }, 1000);
