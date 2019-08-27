@@ -11,3 +11,187 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.button-grid-container, 
+.elevator-container {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+.elevator-container {
+  left: 0;
+  width: 70%;
+  /* background-image: url('./images/elevator.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; */
+  overflow: hidden;
+}
+
+.elevator__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.elevator-door {
+  background-color: #2f4353;
+  background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+  width: 49%; /* Each panel takes up half the container */
+  height: 100vh; /* Used for demo purposes */
+  float: left; /* Makes sure panels are side-by-side */
+  position: relative; /* Needed to define the z-index */
+  z-index: 2; /* Places the panels in front of the prize */
+  transition: all 0.5s ease-out;
+  border-left: 6px solid black;
+  border-right: 5px solid black;
+}
+
+.elevator-door-left {
+  justify-content: flex-end;
+  transform: translateX(-100%);
+}
+
+.elevator-door-right {
+  justify-content: flex-start;
+  transform: translateX(100%);
+}
+
+.elevator {
+  position: absolute; 
+  z-index: 1; 
+  width: 100%;
+  height: 100%;
+}
+
+.elevator-0 {
+  background-image: url('./images/0.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-1 {
+  background-image: url('./images/1.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-2 {
+  background-image: url('./images/2.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-3 {
+  background-image: url('./images/3.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-4 {
+  background-image: url('./images/4.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-5 {
+  background-image: url('./images/5.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-6 {
+  background-image: url('./images/6.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-7 {
+  background-image: url('./images/7.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.elevator-8 {
+  background-image: url('./images/8.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.button-grid-container {
+  right: 0;
+  width: 30%;
+  background-color: #bdd4e7;
+  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.flex-button-row {
+  display: flex;
+  width: 300px;
+}
+
+.flex-button {
+  width: 100px;
+  padding-bottom: 30px;
+}
+
+.elevator-btn {
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  padding: 30px;
+  width: 85px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.active {
+  border: 5px solid #4EF215;
+}
+
+.current {
+  border: 5px solid #FA0000;
+}
+
+.next {
+  border: 5px solid orange;
+}
+
+button:focus {
+  outline:0;
+}
+
+.floor-display {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 95%);
+  height: 300px;
+  margin-bottom: 100px;
+  color: #FA0000;
+}
+
+.floor-number {
+  font-size: 200px;
+  padding-top: 10%;
+  font-family: 'Roboto Condensed', san-serif;
+}
