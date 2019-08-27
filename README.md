@@ -1,3 +1,5 @@
+This is a coding challenge for 20spokes.  I created a literal elevator using ReactJS.
+
 ## Available Scripts
 
 In the project directory, you can run:
